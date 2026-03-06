@@ -41,8 +41,13 @@ Les commandes doivent etre fournies dans un fichier separe `COMMANDS.md`.
 ## Questions de reflexion
 
 - Pourquoi copier `package.json` avant le reste du code ?
+    Afin de profiter du cache Docker. Si les dépendances ne changent pas, Docker n’a pas besoin de réinstaller les packages à chaque build
+
 - Quelle difference de taille entre `node:18` et `node:18-alpine` ?
+    `node:18-alpine` est basé sur Alpine Linux, une distribution plus légère. L’image est donc plus petite et plus rapide à télécharger
+
 - A quoi sert le tag `latest` ?
+    Ca permet d’indiquer la version la plus récente de l’image
 
 ## Criteres de validation
 
