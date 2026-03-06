@@ -74,8 +74,14 @@ Les commandes doivent etre fournies dans un fichier separe `COMMANDS.md`.
 ## Questions de reflexion
 
 - Quelle est la difference de taille entre `1.0.0` et `2.0.0` ?
+    La version 1.0.0 fait environ 45.88 MB et la version 2.0.0 fait environ 42.27 MB.
+
 - Pourquoi `pytest` ne doit pas rester dans l'image de production ?
+    `pytest` sert uniquement à tester l’application pendant la phase de développement. 
+    Je ne le garde pas dans l’image de production afin de réduire la taille de l’image et d’éviter les dépendances inutiles.
+
 - Comment recuperer explicitement la version `1.0.0` depuis Docker Hub ?
+    Avec la commande `docker pull sbellavoine/stats-api:1.0.0`
 
 ## Criteres de validation
 
